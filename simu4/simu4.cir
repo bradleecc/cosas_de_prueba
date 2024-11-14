@@ -1,0 +1,21 @@
+** Profile: "SCHEMATIC1-simu4"  [ c:\cadence\spb_17.2\tools\capture\library\pspice\lab2\laboratorio 4-PSpiceFiles\SCHEMATIC1\simu4.sim ] 
+
+** Creating circuit file "simu4.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/Cadence/SPB_17.2/tools/capture/library/anlg_dev.lib" 
+.LIB "C:/Cadence/SPB_17.2/tools/capture/library/nat_semi.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Bradl\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "C:\Cadence\SPB_17.2\tools\capture\library\source.olb" 
+
+*Analysis directives: 
+.TRAN  0 100u 30u 10n 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

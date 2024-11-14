@@ -1,0 +1,49 @@
+
+**** 09/24/24 19:34:11 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-simu4"  [ c:\cadence\spb_17.2\tools\capture\library\pspice\lab2\laboratorio 4-PSpiceFiles\SCHEMATIC1\simu4.s
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "simu4.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/Cadence/SPB_17.2/tools/capture/library/nat_semi.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Bradl\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "C:\Cadence\SPB_17.2\tools\capture\library\source.olb" 
+
+*Analysis directives: 
+.TRAN  0 100u 30u 10n 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LABORATORIO 4
+R_R1         0 N00201  5.5k TC=0,0 
+R_R2         N00201 VOUT  15k TC=0,0 
+R_R3         0 N00190  3.9k TC=0,0 
+R_R4         N00256 N00190  3.9k TC=0,0 
+C_C1         N00256 VOUT  56p IC=4.5V TC=0,0 
+C_C2         0 N00190  56p IC=4.5V TC=0,0 
+V_V2         0 VEE 9Vdc
+V_V3         VCC 0 9Vdc
+X_U2         N00190 N00201 VCC VEE VOUT AD-845/AD
+
+**** RESUMING simu4.cir ****
+.END
+
+ERROR(ORPSIM-15108): Subcircuit AD-845/AD used by X_U2 is undefined
+

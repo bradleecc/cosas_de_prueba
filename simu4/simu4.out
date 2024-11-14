@@ -1,0 +1,161 @@
+
+**** 09/24/24 19:49:33 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-simu4"  [ c:\cadence\spb_17.2\tools\capture\library\pspice\lab2\laboratorio 4-PSpiceFiles\SCHEMATIC1\simu4.s
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "simu4.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/Cadence/SPB_17.2/tools/capture/library/anlg_dev.lib" 
+.LIB "C:/Cadence/SPB_17.2/tools/capture/library/nat_semi.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Bradl\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "C:\Cadence\SPB_17.2\tools\capture\library\source.olb" 
+
+*Analysis directives: 
+.TRAN  0 100u 30u 10n 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LABORATORIO 4
+R_R1         0 N00201  5.5k TC=0,0 
+R_R2         N00201 VOUT  11k TC=0,0 
+R_R3         0 N00190  3.9k TC=0,0 
+R_R4         N00256 N00190  3.9k TC=0,0 
+C_C1         N00256 VOUT  56p IC=4.5V TC=0,0 
+C_C2         0 N00190  56p IC=4.5V TC=0,0 
+V_V2         0 VEE 5Vdc
+V_V3         VCC 0 5Vdc
+X_U2         N00190 N00201 VCC VEE VOUT AD-845/AD
+
+**** RESUMING simu4.cir ****
+.END
+
+**** 09/24/24 19:49:33 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-simu4"  [ c:\cadence\spb_17.2\tools\capture\library\pspice\lab2\laboratorio 4-PSpiceFiles\SCHEMATIC1\simu4.s
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U2.X1.DX      X_U2.X1.DY      
+          IS    1.000000E-15    1.000000E-15 
+          BV                   50            
+
+
+**** 09/24/24 19:49:33 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-simu4"  [ c:\cadence\spb_17.2\tools\capture\library\pspice\lab2\laboratorio 4-PSpiceFiles\SCHEMATIC1\simu4.s
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U2.X1.JX      
+               NJF             
+         VTO   -2            
+        BETA  742.900000E-06 
+          IS  250.000000E-12 
+
+
+**** 09/24/24 19:49:33 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-simu4"  [ c:\cadence\spb_17.2\tools\capture\library\pspice\lab2\laboratorio 4-PSpiceFiles\SCHEMATIC1\simu4.s
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCC)    5.0000  (  VEE)   -5.0000  ( VOUT)   -2.9226  (N00190)   -4.5000     
+
+(N00201)    -.9742 (N00256)    1.5774 (X_U2.X1.3)   -2.7371                     
+
+(X_U2.X1.4)    -.1344                 (X_U2.X1.5)    4.1796                     
+
+(X_U2.X1.6)    5.0000                 (X_U2.X1.7)   -4.4999                     
+
+(X_U2.X1.8)    0.0000                 (X_U2.X1.9)   -2.9022                     
+
+(X_U2.X1.10)    2.1875                (X_U2.X1.11)   -2.1875                    
+
+(X_U2.X1.12)   -8.6555                (X_U2.X1.13)-8.656E-06                    
+
+(X_U2.X1.14)    0.0000                (X_U2.X1.15)   -2.9022                    
+
+(X_U2.X1.16)-2.902E+06                (X_U2.X1.17)   -2.9021                    
+
+(X_U2.X1.18)   -2.9021                (X_U2.X1.30)   -2.9021                    
+
+(X_U2.X1.31)    4.2953                (X_U2.X1.32)   -2.7726                    
+
+(X_U2.X1.33)   -3.0726                (X_U2.X1.34)   45.4070                    
+
+(X_U2.X1.35)   -2.9226                
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -8.429E-03
+    V_V3        -1.081E-02
+    X_U2.X1.V1   5.091E-12
+    X_U2.X1.V2  -1.000E-03
+    X_U2.X1.VX   4.086E-14
+    X_U2.X1.V3  -1.306E-13
+    X_U2.X1.V4  -1.714E-13
+
+    TOTAL POWER DISSIPATION   9.90E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 09/24/24 19:49:33 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-simu4"  [ c:\cadence\spb_17.2\tools\capture\library\pspice\lab2\laboratorio 4-PSpiceFiles\SCHEMATIC1\simu4.s
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        3.33
+
